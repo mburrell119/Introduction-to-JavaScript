@@ -17,8 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let votingAge = 18
+if (votingAge >= 18){
+  console.log(true)
+}
 
 /*
 Task 1b - Values
@@ -31,6 +33,11 @@ Do the following:
    HINT: no function required
 */
 
+let home = 7
+let away = 4
+ if (home>away){
+   console.log(home+away)
+ }
 
 
 
@@ -45,7 +52,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+// let home = "1999"
+// home = 1999
+// console.log(home)
 
 
 
@@ -58,8 +67,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+   return a*b
   }
 
 
@@ -74,8 +83,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(human){
+    return human*7
 }
 
 
@@ -107,9 +116,22 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight,age){
+  if (age>=1){
+    if (weight<=5) {
+      return weight * .05
+    }
+    else if (weight>=6 && weight<=10){
+      return weight * .04
+    }
+    else if (weight>=11 && weight<=15){
+      return weight * .03
+    }else if (weight>15){
+      return weight * .02
+    }
   }
+    
+}
 
 
 
@@ -151,8 +173,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    return 0.621371 * kilometers
   }
 
 
@@ -165,8 +187,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48
   }
  
 
@@ -181,8 +203,9 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(){
+  for (let number = 5; number>0; number--)
+       return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number - 1} bottles of soda on the wall`
   }
 
 
@@ -201,8 +224,20 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(letter){
+  if (letter == 100 || letter>=90) {
+    return 'you got an A'
+  } 
+  else if (letter <=89 && letter>=80) {
+    return 'you got a B'
+  }
+  else if (letter <=79 && letter>=70) {
+    return 'you got a C'
+  }else if (letter <=69 && letter>=60) {
+    return 'you got a D'
+  }
+  else {return `you got an F`}
+
   }
   
   
